@@ -19,7 +19,7 @@
 						<div class="col-xl-5 col-lg-6 col-md-8">
 							<nav class="mb-4" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
 								<ol class="breadcrumb mb-0">
-									<li class="breadcrumb-item"><a th="@{/admin/houses}">民宿一覧</a></li>
+									<li class="breadcrumb-item"><a th:href="@{/admin/houses}">民宿一覧</a></li>
 									<li class="breadcrumb-item active" aria-current="page">民宿詳細</li>
 								</ol>
 							</nav>
@@ -78,45 +78,46 @@
 									</div>
 								</div>
 								
-							<div class="row pb-2 mb-2 border-bottom">
-								<div class="col-4">
-									<span class="fw-bold">定員</span>
-								</div>
+								<div class="row pb-2 mb-2 border-bottom">
+									<div class="col-4">
+										<span class="fw-bold">定員</span>
+									</div>
 								
-								<div class="col">
-									<span th:text="${house.getCapacity() + '人'}"></span>
+									<div class="col">
+										<span th:text="${house.getCapacity() + '人'}"></span>
+									</div>
+								</div>
+							
+								<div class="row pb-2 mb-2 border-bottom">
+									<div class="col-4">
+										<span class="fw-bold">郵便番号</span>
+									</div>
+								
+									<div class="col">
+										<span th:text="${house.getPostalCode()}"></span>
+									</div>
+								</div>
+							
+								<div class="row pb-2 mb-2 border-bottom">
+									<div class="col-4">
+										<span class="fw-bold">住所</span>
+									</div>
+								
+									<div class="col">
+										<span th:text="${house.getAddress()}"></span>
+									</div>
+								</div>
+							
+								<div class="row pb-2 mb-2 border-bottom">
+									<div class="col-4">
+										<span class="fw-bold">電話番号</span>
+									</div>
+								
+									<div class="col">
+										<span th:text="${house.getPhoneNumber()}"></span>
+									</div>
 								</div>
 							</div>
-							
-							<div class="row pb-2 mb-2 border-bottom">
-								<div class="col-4">
-									<span class="fw-bold">郵便番号</span>
-								</div>
-								
-								<div class="col">
-									<span th:text="${house.getPostalCode()}"></span>
-								</div>
-							</div>
-							
-							<div class="row pb-2 mb-2 border-bottom">
-								<div class="col-4">
-									<span class="fw-bold">住所</span>
-								</div>
-								
-								<div class="col">
-									<span th:text="${house.getAddress()}"></span>
-								</div>
-							</div>
-							
-							<div class="row pb-2 mb-2 border-bottom">
-								<div class="col-4">
-									<span class="fw-bold">電話番号</span>
-								</div>
-								
-								<div class="col">
-									<span th:text="${house.getPhoneNumber()}"></span>
-								</div>
-							</div>							
 						</div>
 					</div>
 				</div>
