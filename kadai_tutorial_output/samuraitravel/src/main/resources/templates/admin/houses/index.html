@@ -13,7 +13,7 @@
 			<div th:replace="~{fragment :: header}"></div>
 			
 			<main>
-				<div class="container pt-4 pb-5 samuraiteavel-container">
+				<div class="container pt-4 pb-5 samuraitravel-container">
 					<div class="row justify-content-center">
 						<div class="col-xxl-9 col-xl-10 col-lg-11">
 							
@@ -22,12 +22,12 @@
 							<div class="d-flex justify-content-between align-items-end flex-wrap">
 								<form method="get" th:action="@{/admin/houses}" class="mb-3">
 									<div class="input-group">
-										<input type="text" class="form=control" name="keyword" th:value="${keyword}" placeholder="民宿名">
-										<dutton type="submit" class="btn text-white shadow-sm samuraitravel-btn">検索</dutton>
+										<input type="text" class="form-control" name="keyword" th:value="${keyword}" placeholder="民宿名">
+										<button type="submit" class="btn text-white shadow-sm samuraitravel-btn">検索</dutton>
 									</div>
 								</form>
 								
-								<a th:href="@{/admin/houses/register}" class="btn text-white shadow^sm mb-3 samuraitravel-btn">登録</a>
+								<a th:href="@{/admin/houses/register}" class="btn text-white shadow-sm mb-3 samuraitravel-btn">登録</a>
 							</div>
 							
 							<div th:if="${successMessage}" class="alert alert-info">
@@ -57,7 +57,7 @@
 										<td><a href="#" class="samuraitravel-link-danger" data-bs-toggle="modal" th:data-bs-target="${'#deleteHouseModal' + house.getId()}">削除</a></td>
 										
 										<!-- 削除用モーダル -->
-										<div class="modal fade" th:id="${'deleteHouseModal' + house.getId()}" tabindex="-1" aria-labelledby="${'deleteHouseModalLabel' + house.getID()}">
+										<div class="modal fade" th:id="${'deleteHouseModal' + house.getId()}" tabindex="-1" th="${'deleteHouseModalLabel' + house.getId()}">
 											<div class="modal-dialog">
 												<div class="modal-content">
 													<div class="modal-header">
