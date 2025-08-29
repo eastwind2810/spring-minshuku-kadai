@@ -16,10 +16,10 @@
 			<main>
 				<div class="container pt-4 pb-5 samuraitravel-container">
 					<div class="row justify-content-center">
-						<div class="col-x1-5 col-lg-6 col-md-8">
+						<div class="col-xl-5 col-lg-6 col-md-8">
 							<nav class="mb-4" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
 								<ol class="breadcrumb mb-0">
-									<li class="breadcrumb-item"><a href="@{admin/houses}">民宿一覧</a></li>
+									<li class="breadcrumb-item"><a th="@{/admin/houses}">民宿一覧</a></li>
 									<li class="breadcrumb-item active" aria-current="page">民宿詳細</li>
 								</ol>
 							</nav>
@@ -100,7 +100,7 @@
 							
 							<div class="row pb-2 mb-2 border-bottom">
 								<div class="col-4">
-									<span class="fw-bord">住所</span>
+									<span class="fw-bold">住所</span>
 								</div>
 								
 								<div class="col">
@@ -116,8 +116,7 @@
 								<div class="col">
 									<span th:text="${house.getPhoneNumber()}"></span>
 								</div>
-							</div>
-							
+							</div>							
 						</div>
 					</div>
 				</div>
